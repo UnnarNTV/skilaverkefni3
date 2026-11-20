@@ -9,7 +9,8 @@ function App() {
   const [questionIndex, setQuestionIndex] = useState(0);
   const currentQuestion = questions[questionIndex];
   const [answers, setAnswers] = useState<boolean[]>([]);
-  const answered = answers[questionIndex];
+  const answered = answers.length > questionIndex;
+  const [currentSelected, setCurrentSelected] = useState<number | null>(null);
 
   // changes between states in the quiz
   function handleScreenChange() {
@@ -28,10 +29,21 @@ function App() {
     if (questionIndex < questions.length - 1) {
       setQuestionIndex(questionIndex + 1);
     }
+    setCurrentSelected(null);
   }
 
   // handles the feedback and management of user answering questions
-  function handleAnswerQuestion() {}
+  function handleAnswerQuestion(index: number) {
+    if (!answered) {
+      setCurrentSelected(index);
+
+      // Records wheter or not the user answered correctly or not
+      setAnswers([
+        ...answers,
+        currentSelected === currentQuestion.correctIndex,
+      ]);
+    }
+  }
 
   return (
     <>
@@ -46,7 +58,8 @@ function App() {
         {screen === "quiz" && (
           <Question
             question={currentQuestion}
-            answered={false}
+            answered={answered}
+            currentSelected={currentSelected}
             onNextQuestion={handleNextQuestion}
             onAnswerQuestion={handleAnswerQuestion}
           />

@@ -16,3 +16,8 @@
   border: 3px solid green;
   background-color: rgb(139, 209, 139);
 }
+
+.incorrect {
+  border: 3px solid red;
+  background-color: rgb(247, 163, 163);
+}
