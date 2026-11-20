@@ -12,7 +12,7 @@ function App() {
   const answered = answers.length > questionIndex;
   const [currentSelected, setCurrentSelected] = useState<number | null>(null);
 
-  // changes between states in the quiz
+  // Changes between states in the quiz
   function handleScreenChange() {
     if (screen === "greeting") {
       setScreen("quiz");
@@ -24,7 +24,7 @@ function App() {
     }
   }
 
-  // changes to the next question in the quiz
+  // Changes to the next question in the quiz
   function handleNextQuestion() {
     if (questionIndex < questions.length - 1) {
       setQuestionIndex(questionIndex + 1);
@@ -32,7 +32,7 @@ function App() {
     setCurrentSelected(null);
   }
 
-  // handles the feedback and management of user answering questions
+  // Handles the feedback and management of user answering questions
   function handleAnswerQuestion(index: number) {
     if (!answered) {
       setCurrentSelected(index);
