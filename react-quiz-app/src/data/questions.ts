@@ -31,7 +31,7 @@ export const questions = [
   {
     id: 3,
     question: "What is your favorite color?",
-    options: ["Red", "Blue", "Yellow", "Møøse brown"],
+    options: ["Red", "Blue", "Yellow", "Møøse brøwn"],
     correctIndex: 1,
   },
   {

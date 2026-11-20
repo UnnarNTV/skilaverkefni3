@@ -4,7 +4,6 @@ type QuestionProps = {
   question: Question;
   answered: boolean;
   currentSelected: number | null;
-  onNextQuestion: () => void;
   onAnswerQuestion: (index: number) => void;
 };
 
@@ -12,7 +11,6 @@ export function Question({
   question,
   answered,
   currentSelected,
-  onNextQuestion,
   onAnswerQuestion,
 }: QuestionProps) {
   return (
@@ -22,7 +20,6 @@ export function Question({
         <div
           key={i}
           className={`answer ${answered ? (i === question.correctIndex ? "correct" : i === currentSelected ? "incorrect" : "") : ""}`}
-          // className={`answer ${answered && i === question.correctIndex ? "correct" : ""}`}
         >
           <p>
             {i + 1}: {option}
@@ -30,7 +27,6 @@ export function Question({
           <button onClick={() => onAnswerQuestion(i)}>⬅</button>
         </div>
       ))}
-      <button onClick={onNextQuestion}>Next question</button>
     </div>
   );
 }
