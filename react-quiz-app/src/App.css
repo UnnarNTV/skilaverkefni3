@@ -1,0 +1,18 @@
+.answer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+  border: 1px solid black;
+  border-radius: 7px;
+  margin: 8px;
+  padding: 4px;
+}
+
+.answer p {
+  margin: 0;
+}
+
+.correct {
+  border: 3px solid green;
+  background-color: rgb(139, 209, 139);
+}
