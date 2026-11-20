@@ -24,9 +24,9 @@ export const questions = [
       "To find a shrubbery. One that looks nice. And isn't too expensive.",
       "To seek the holy grail!",
       "To purchase a parrot that isn't dead.",
-      "“To find a cheese shop that actually sells cheese.”",
+      "To find a cheese shop that actually sells cheese.",
     ],
-    correctIndex: 0,
+    correctIndex: 1,
   },
   {
     id: 3,
