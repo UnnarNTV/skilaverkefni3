@@ -3,8 +3,9 @@ import "./App.css";
 import { questions } from "./data/questions";
 import { Question } from "./components/Question";
 import failure from "./images/failure.gif";
-import bridgeKeeper from "./images/bridgekeeper.webp";
+
 import grail from "./images/grail.webp";
+import { Greeting } from "./components/Greeting";
 
 function App() {
   type Screen = "greeting" | "quiz" | "summary";
@@ -16,6 +17,7 @@ function App() {
   const correctlyAnswered = answers.filter(
     (answeredCorrectly) => answeredCorrectly,
   ).length;
+  const incorrectlyAnswered = answers.length - correctlyAnswered;
   const [currentSelected, setCurrentSelected] = useState<number | null>(null);
   const isLastQuestion = questionIndex >= questions.length - 1;
 
@@ -62,15 +64,7 @@ function App() {
       <section>
         {screen === "greeting" && (
           <>
-            <img
-              src={bridgeKeeper}
-              alt="The wizened bridgekeer, as last seen in Scene 24"
-            />
-            <p>
-              Stop! Who would cross the Bridge of Death must answer me questions
-              three <small>(correctly out of five)</small>, ere the other side
-              he see!
-            </p>
+            <Greeting />
             <button onClick={handleScreenChange}>Ask me the questions!</button>
           </>
         )}
@@ -107,8 +101,9 @@ function App() {
                   {correctlyAnswered <= 0
                     ? "none"
                     : `only ${correctlyAnswered}`}{" "}
-                  out of {questions.length} questions correctly, and are cast
-                  into the Gorge of Eternal Peril!
+                  out of {questions.length} questions correctly,{" "}
+                  {incorrectlyAnswered} were wrong, and you are cast into the
+                  Gorge of Eternal Peril!
                 </p>
               </>
             ) : (
@@ -120,8 +115,9 @@ function App() {
                 <h2>You have prevailed!</h2>
                 <p>
                   You have answered {correctlyAnswered} out of{" "}
-                  {questions.length} questions correctly, and may continue your
-                  quest! Right. Off you go.
+                  {questions.length} questions correctly, {incorrectlyAnswered}{" "}
+                  were wrong, and you may continue your quest! Right. Off you
+                  go.
                 </p>
               </>
             )}
