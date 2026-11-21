@@ -3,6 +3,7 @@ import "./App.css";
 import { questions } from "./data/questions";
 import { Question } from "./components/Question";
 import failure from "./images/failure.gif";
+import bridgeKeeper from "./images/bridgekeeper.webp";
 
 function App() {
   type Screen = "greeting" | "quiz" | "summary";
@@ -60,9 +61,14 @@ function App() {
       <section>
         {screen === "greeting" && (
           <>
+            <img
+              src={bridgeKeeper}
+              alt="The wizened bridgekeer, as last seen in Scene 24"
+            />
             <p>
-              Stop! Who would cross the Bridge of Death must answer me these
-              questions five, ere the other side he see!
+              Stop! Who would cross the Bridge of Death must answer me questions
+              three <small>(correctly out of five)</small>, ere the other side
+              he see!
             </p>
             <button onClick={handleScreenChange}>Ask me the questions!</button>
           </>
@@ -92,7 +98,7 @@ function App() {
               <>
                 <img
                   src={failure}
-                  alt="You have failed and are cast into the Pit of Eternal Peril!"
+                  alt="You have failed and are cast into the Gorge of Eternal Peril!"
                 />
                 <h2>You have failed!</h2>
                 <p>
@@ -101,15 +107,16 @@ function App() {
                     ? "none"
                     : `only ${correctlyAnswered}`}{" "}
                   out of {questions.length} questions correctly, and are cast
-                  into the Pit of Eternal Peril!
+                  into the Gorge of Eternal Peril!
                 </p>
               </>
             ) : (
               <>
                 <h2>You have prevailed!</h2>
                 <p>
-                  You have completed the quest and answered {correctlyAnswered}{" "}
-                  out of {questions.length} questions correctly!
+                  You have answered {correctlyAnswered} out of{" "}
+                  {questions.length} questions correctly, and may continue your
+                  quest! Right. Off you go.
                 </p>
               </>
             )}

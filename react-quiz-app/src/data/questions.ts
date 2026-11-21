@@ -53,8 +53,14 @@ export const questions = [
   },
   {
     id: 6,
-    question: "NOBOY EXPECTS THE SPANISH INQUISITION!!!",
-    options: ["Red", "Blue", "Yellow", "Dead Møøse"],
-    correctIndex: 1,
+    question:
+      "NOBOY EXPECTS THE SPANISH INQUISITION!!!\nOur chief weapons are?",
+    options: [
+      "The Holy Hand Grenade, a shrubbery, and a very angry rabbit.",
+      "THE SOFT CUSHION!",
+      "Surprise! Fear! Ruthless efficiency! And an almost fanatical devotion to the Pope!",
+      "This is a lingerie shop, sir.",
+    ],
+    correctIndex: 2,
   },
 ];
