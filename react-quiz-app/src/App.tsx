@@ -60,44 +60,47 @@ function App() {
   }
 
   return (
-    <main>
-      <h1>Bridge of Death</h1>
-      {screen === "greeting" && (
-        <>
-          <Greeting />
-          <button onClick={handleScreenChange}>Ask me the questions!</button>
-        </>
-      )}
-      {screen === "quiz" && (
-        <>
-          <Question
-            question={currentQuestion}
-            answered={answered}
-            currentSelected={currentSelected}
-            onAnswerQuestion={handleAnswerQuestion}
-          />
-          <p>
-            Question {questionIndex + 1} of {questions.length}
-          </p>
-          <button
-            onClick={isLastQuestion ? handleScreenChange : handleNextQuestion}
-            disabled={!answered}
-          >
-            {isLastQuestion ? "Finish quest!" : "Next question!"}
-          </button>
-        </>
-      )}
-      {screen === "summary" && (
-        <>
-          <Summary
-            questions={questions}
-            correctlyAnswered={correctlyAnswered}
-            incorrectlyAnswered={incorrectlyAnswered}
-          />
-          <button onClick={handleReset}>Restart quest!</button>
-        </>
-      )}
-    </main>
+    <>
+      <main>
+        <h1>Bridge of Death</h1>
+        {screen === "greeting" && (
+          <>
+            <Greeting />
+            <button onClick={handleScreenChange}>Ask me the questions!</button>
+          </>
+        )}
+        {screen === "quiz" && (
+          <>
+            <Question
+              question={currentQuestion}
+              answered={answered}
+              currentSelected={currentSelected}
+              onAnswerQuestion={handleAnswerQuestion}
+            />
+            <p>
+              Question {questionIndex + 1} of {questions.length}
+            </p>
+            <button
+              onClick={isLastQuestion ? handleScreenChange : handleNextQuestion}
+              disabled={!answered}
+            >
+              {isLastQuestion ? "Finish quest!" : "Next question!"}
+            </button>
+          </>
+        )}
+        {screen === "summary" && (
+          <>
+            <Summary
+              questions={questions}
+              correctlyAnswered={correctlyAnswered}
+              incorrectlyAnswered={incorrectlyAnswered}
+            />
+            <button onClick={handleReset}>Restart quest!</button>
+          </>
+        )}
+      </main>
+      <footer></footer>
+    </>
   );
 }
 
