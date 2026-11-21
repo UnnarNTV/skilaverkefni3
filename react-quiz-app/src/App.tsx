@@ -4,6 +4,7 @@ import { questions } from "./data/questions";
 import { Question } from "./components/Question";
 import failure from "./images/failure.gif";
 import bridgeKeeper from "./images/bridgekeeper.webp";
+import grail from "./images/grail.webp";
 
 function App() {
   type Screen = "greeting" | "quiz" | "summary";
@@ -112,6 +113,10 @@ function App() {
               </>
             ) : (
               <>
+                <img
+                  src={grail}
+                  alt="You have passed the Bridge of Death. The Quest for the Holy Grail can continue!"
+                />
                 <h2>You have prevailed!</h2>
                 <p>
                   You have answered {correctlyAnswered} out of{" "}
