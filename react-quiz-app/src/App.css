@@ -1,10 +1,29 @@
+main {
+  background-color: beige;
+  padding: 1px 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Question and answer section */
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
 .answer {
   display: flex;
   justify-content: space-between;
-  max-width: 200px;
+  gap: 3px;
+  text-align: left;
+  width: 300px;
   border: 3px solid gray;
   border-radius: 7px;
-  margin: 8px;
   padding: 4px;
 }
 
@@ -24,4 +43,8 @@
 .incorrect {
   border: 3px solid red;
   background-color: rgb(247, 163, 163);
+}
+
+.answer-button {
+  /* background-color: rgb(152, 152, 226); */
 }
