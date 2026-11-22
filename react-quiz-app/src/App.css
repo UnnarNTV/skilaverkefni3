@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/* General html elements */
+
 body {
   background-color: rgb(4, 164, 245);
   background-image: url("./assets/holy-grail-background.webp");
@@ -37,6 +39,7 @@ h2 {
 
 img {
   max-width: 100%;
+  height: auto;
   border: 1px solid black;
 }
 

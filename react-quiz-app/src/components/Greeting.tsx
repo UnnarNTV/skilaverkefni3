@@ -6,6 +6,8 @@ export function Greeting() {
       <img
         src={bridgeKeeper}
         alt="The wizened bridgekeer, as last seen in Scene 24"
+        width={302}
+        height={232}
       />
       <p>
         Stop! Who would cross the Bridge of Death must answer me questions three{" "}

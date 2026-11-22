@@ -20,6 +20,8 @@ export function Summary({
           <img
             src={failure}
             alt="You have failed and are cast into the Gorge of Eternal Peril!"
+            width={640}
+            height={360}
           />
           <h2>You have failed!</h2>
           <p>
@@ -35,6 +37,8 @@ export function Summary({
           <img
             src={grail}
             alt="You have passed the Bridge of Death. The Quest for the Holy Grail can continue!"
+            width={739}
+            height={415}
           />
           <h2>You have prevailed!</h2>
           <p>
