@@ -2,9 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import { questions } from "./data/questions";
 import { Question } from "./components/Question";
-import failure from "./images/failure.gif";
-
-import grail from "./images/grail.webp";
 import { Greeting } from "./components/Greeting";
 import { Summary } from "./components/Summary";
 

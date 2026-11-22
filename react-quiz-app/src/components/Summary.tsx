@@ -1,6 +1,6 @@
 import type { Question } from "../data/questions";
-import failure from "../images/failure.gif";
-import grail from "../images/grail.webp";
+import failure from "../assets/failure.gif";
+import grail from "../assets/grail.webp";
 
 type SummaryProps = {
   questions: Question[];

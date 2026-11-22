@@ -1,4 +1,4 @@
-import bridgeKeeper from "../images/bridgekeeper.webp";
+import bridgeKeeper from "../assets/bridgekeeper.webp";
 
 export function Greeting() {
   return (
