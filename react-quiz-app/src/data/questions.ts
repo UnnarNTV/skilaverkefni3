@@ -56,7 +56,7 @@ export const questions = [
     question:
       "NOBODY EXPECTS THE SPANISH INQUISITION!!!\nOur chief weapons are?",
     options: [
-      "The Holy Hand Grenade, a shrubbery, and a very angry rabbit.",
+      "The Holy Hand Grenade, a herring, and a very angry rabbit.",
       "THE SOFT CUSHIONS!",
       "Surprise! Fear! Ruthless efficiency! And an almost fanatical devotion to the Pope!",
       "This is a lingerie shop, sir.",
