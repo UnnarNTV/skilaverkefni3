@@ -1,6 +1,6 @@
 import type { Question } from "../data/questions";
 import failure from "../assets/failure.gif";
-import grail from "../assets/grail.webp";
+import grail from "../assets/grail.gif";
 
 type SummaryProps = {
   questions: Question[];
@@ -37,8 +37,8 @@ export function Summary({
           <img
             src={grail}
             alt="You have passed the Bridge of Death. The Quest for the Holy Grail can continue!"
-            width={739}
-            height={415}
+            width={800}
+            height={481}
           />
           <h2>You have prevailed!</h2>
           <p>
