@@ -75,13 +75,17 @@ function App() {
               onAnswerQuestion={handleAnswerQuestion}
             />
             <p>
-              Question {questionIndex + 1} of {questions.length}
+              Question {questionIndex + 1} of{" "}
+              {isLastQuestion ? questions.length + "?!?" : questions.length - 1}
             </p>
             <button
               onClick={isLastQuestion ? handleScreenChange : handleNextQuestion}
               disabled={!answered}
             >
-              {isLastQuestion ? "Finish quest!" : "Next question!"}
+              {isLastQuestion || questionIndex === 4
+                ? "Finish quest!"
+                : "Next question!"}
+              {isLastQuestion && " (For real)"}
             </button>
           </>
         )}
@@ -92,7 +96,7 @@ function App() {
               correctlyAnswered={correctlyAnswered}
               incorrectlyAnswered={incorrectlyAnswered}
             />
-            <button onClick={handleReset}>Restart quest!</button>
+            <button onClick={handleReset}>Restart!</button>
           </>
         )}
       </main>
