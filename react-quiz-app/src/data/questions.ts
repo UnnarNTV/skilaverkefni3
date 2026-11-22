@@ -37,7 +37,12 @@ export const questions = [
   {
     id: 4,
     question: "What is the capital of Assyria?",
-    options: ["Assur", "Reykjavík", "Keflavík", "I don't know that!"],
+    options: [
+      "Assur, obviously",
+      "Reykjavík",
+      "Keflavík",
+      "I don't know that!",
+    ],
     correctIndex: 0,
   },
   {

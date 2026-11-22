@@ -28,8 +28,8 @@ export function Summary({
             You answered{" "}
             {correctlyAnswered <= 0 ? "none" : `only ${correctlyAnswered}`} out
             of {questions.length} questions correctly, with{" "}
-            {incorrectlyAnswered} wrong, and you are cast into the Gorge of
-            Eternal Peril!
+            {incorrectlyAnswered} answered incorrectly, and you are cast into
+            the Gorge of Eternal Peril!
           </p>
         </>
       ) : (
@@ -43,8 +43,8 @@ export function Summary({
           <h2>You have prevailed!</h2>
           <p>
             You have answered {correctlyAnswered} out of {questions.length}{" "}
-            questions correctly, with {incorrectlyAnswered} wrong, and you may
-            continue your quest! Right. Off you go.
+            questions correctly, with {incorrectlyAnswered} answered
+            incorrectly, and you may continue your quest! Right. Off you go.
           </p>
         </>
       )}

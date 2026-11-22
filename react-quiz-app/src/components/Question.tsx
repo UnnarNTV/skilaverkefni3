@@ -15,7 +15,7 @@ export function Question({
 }: QuestionProps) {
   return (
     <div className="question">
-      <p>Q: {question.question}</p>
+      <p>{question.question}</p>
       {question.options.map((option, i) => (
         // Maps each answer option to a ui element row
         <div
