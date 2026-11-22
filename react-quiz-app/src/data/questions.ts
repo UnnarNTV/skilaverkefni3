@@ -54,10 +54,10 @@ export const questions = [
   {
     id: 6,
     question:
-      "NOBOY EXPECTS THE SPANISH INQUISITION!!!\nOur chief weapons are?",
+      "NOBODY EXPECTS THE SPANISH INQUISITION!!!\nOur chief weapons are?",
     options: [
       "The Holy Hand Grenade, a shrubbery, and a very angry rabbit.",
-      "THE SOFT CUSHION!",
+      "THE SOFT CUSHIONS!",
       "Surprise! Fear! Ruthless efficiency! And an almost fanatical devotion to the Pope!",
       "This is a lingerie shop, sir.",
     ],
