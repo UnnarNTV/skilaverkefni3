@@ -4,6 +4,7 @@ import { questions } from "./data/questions";
 import { Question } from "./components/Question";
 import { Greeting } from "./components/Greeting";
 import { Summary } from "./components/Summary";
+import siSound from "./assets/si.mp3";
 
 function App() {
   type Screen = "greeting" | "quiz" | "summary";
@@ -18,6 +19,7 @@ function App() {
   const incorrectlyAnswered = answers.length - correctlyAnswered;
   const [currentSelected, setCurrentSelected] = useState<number | null>(null);
   const isLastQuestion = questionIndex >= questions.length - 1;
+  const sound = new Audio(siSound);
 
   // Changes between states in the quiz
   function handleScreenChange() {
@@ -43,6 +45,11 @@ function App() {
     if (questionIndex < questions.length - 1) {
       setQuestionIndex(questionIndex + 1);
     }
+
+    if (questionIndex === 4) {
+      sound.play().catch(console.error);
+    }
+
     setCurrentSelected(null);
   }
 

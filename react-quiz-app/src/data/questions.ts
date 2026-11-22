@@ -11,8 +11,8 @@ export const questions = [
     question: "What is your name?",
     options: [
       "Sir Lancelot of Camelot",
-      "Sir Robin of Camelot",
-      "Sir Galahad of Camelot",
+      "My name is Roger the Shrubber",
+      "Sir Not-Appearing-In-This-Quiz",
       "There are some who call me... Tim?",
     ],
     correctIndex: 0,
