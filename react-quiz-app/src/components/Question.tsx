@@ -19,15 +19,13 @@ export function Question({
       {question.options.map((option, i) => (
         // Maps each answer option to a ui element row
         <div
+          onClick={() => onAnswerQuestion(i)}
           key={i}
           className={`answer ${answered ? (i === question.correctIndex ? "correct" : i === currentSelected ? "incorrect" : "") : ""}`}
         >
           <p>
             {i + 1}: {option}
           </p>
-          <button className="answer-button" onClick={() => onAnswerQuestion(i)}>
-            ⬅
-          </button>
         </div>
       ))}
     </div>

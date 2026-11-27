@@ -67,12 +67,16 @@ function App() {
     <>
       <main>
         <h1>Bridge of Death</h1>
+
+        {/* The greeting screen */}
         {screen === "greeting" && (
           <>
             <Greeting />
             <button onClick={handleScreenChange}>Ask me the questions!</button>
           </>
         )}
+
+        {/* The main quiz screen */}
         {screen === "quiz" && (
           <>
             <Question
@@ -90,12 +94,14 @@ function App() {
               disabled={!answered}
             >
               {isLastQuestion || questionIndex === 4
-                ? "Finish quest!"
+                ? "Finish quiz!"
                 : "Next question!"}
               {isLastQuestion && " (For real)"}
             </button>
           </>
         )}
+
+        {/* The summary screen */}
         {screen === "summary" && (
           <>
             <Summary

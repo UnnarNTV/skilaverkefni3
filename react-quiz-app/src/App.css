@@ -17,7 +17,7 @@ body {
 }
 
 main {
-  background-color: rgba(245, 245, 220, 0.8);
+  background-color: rgba(220, 229, 245, 0.8);
   padding: 10px 10px;
   text-align: center;
   margin: 35px;
@@ -57,9 +57,22 @@ img {
   gap: 3px;
   text-align: left;
   width: 300px;
-  border: 3px solid gray;
+  background-color: rgb(159, 184, 248);
+  border: 3px solid rgb(159, 184, 248);
+  box-shadow: 2px 2px 5px black;
+  cursor: pointer;
   border-radius: 7px;
   padding: 4px;
+}
+
+.answer:hover:not(.correct):not(.incorrect) {
+  background-color: rgb(185, 203, 247);
+  border-color: rgb(185, 203, 247);
+}
+
+.answer:active:not(.correct):not(.incorrect) {
+  background-color: rgb(133, 165, 249);
+  border-color: rgb(133, 165, 249);
 }
 
 .question p {
@@ -84,6 +97,15 @@ img {
 button {
   font-family: "Jim Nightshade", cursive;
   font-size: 24px;
+  background-color: rgb(218, 185, 104);
+}
+
+button:hover:not(:disabled) {
+  background-color: rgb(235, 208, 140);
+}
+
+button:active:not(:disabled) {
+  background-color: rgb(190, 155, 73);
 }
 
 .answer-button {
