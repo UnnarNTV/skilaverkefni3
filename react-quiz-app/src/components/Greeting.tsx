@@ -11,7 +11,7 @@ export function Greeting() {
       />
       <p>
         Stop! Who would cross the Bridge of Death must answer me questions three{" "}
-        <small>(correctly out of five)</small>, ere the other side he see!
+        <small>(correctly out of five)</small>, ere the other side (s)he see!
       </p>
     </>
   );
