@@ -3,7 +3,6 @@
 }
 
 /* General html elements */
-
 body {
   background-color: rgb(4, 164, 245);
   background-image: url("./assets/holy-grail-background.webp");
@@ -18,7 +17,7 @@ body {
 
 main {
   background-color: rgba(220, 229, 245, 0.8);
-  padding: 10px 10px;
+  padding: 10px 10px 30px;
   text-align: center;
   margin: 35px;
   border-radius: 7px;
@@ -37,10 +36,34 @@ h2 {
   margin: 15px;
 }
 
+p {
+  margin: 10px 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
   border: 1px solid black;
+}
+
+button {
+  appearance: none;
+  font-family: "Jim Nightshade", cursive;
+  font-size: 24px;
+  background-color: rgb(218, 185, 104);
+  border: 1px solid rgb(218, 185, 104);
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px black;
+}
+
+button:hover:not(:disabled) {
+  background-color: rgb(235, 208, 140);
+  border-color: rgb(235, 208, 140);
+}
+
+button:active:not(:disabled) {
+  background-color: rgb(190, 155, 73);
+  border-color: rgb(190, 155, 73);
 }
 
 /* Question and answer section */
@@ -92,20 +115,6 @@ img {
 .incorrect {
   border: 3px solid red;
   background-color: rgb(247, 163, 163);
-}
-
-button {
-  font-family: "Jim Nightshade", cursive;
-  font-size: 24px;
-  background-color: rgb(218, 185, 104);
-}
-
-button:hover:not(:disabled) {
-  background-color: rgb(235, 208, 140);
-}
-
-button:active:not(:disabled) {
-  background-color: rgb(190, 155, 73);
 }
 
 .answer-button {
