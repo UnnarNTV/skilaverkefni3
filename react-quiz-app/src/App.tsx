@@ -7,19 +7,19 @@ import { Summary } from "./components/Summary";
 import siSound from "./assets/si.mp3";
 
 function App() {
-  type Screen = "greeting" | "quiz" | "summary";
-  const [screen, setScreen] = useState<Screen>("greeting");
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const currentQuestion = questions[questionIndex];
-  const [answers, setAnswers] = useState<boolean[]>([]);
-  const answered = answers.length > questionIndex;
+  type Screen = "greeting" | "quiz" | "summary"; // Possible screens
+  const [screen, setScreen] = useState<Screen>("greeting"); // Controls which screen of the app to render
+  const [questionIndex, setQuestionIndex] = useState(0); // An index of the current question
+  const currentQuestion = questions[questionIndex]; // The question currently being asked
+  const [answers, setAnswers] = useState<boolean[]>([]); // Tracks whether questions have been answered correctly or incorrectly
+  const answered = answers.length > questionIndex; // Indicates if the current question has been answered
   const correctlyAnswered = answers.filter(
     (answeredCorrectly) => answeredCorrectly,
-  ).length;
-  const incorrectlyAnswered = answers.length - correctlyAnswered;
-  const [currentSelected, setCurrentSelected] = useState<number | null>(null);
-  const isLastQuestion = questionIndex >= questions.length - 1;
-  const sound = new Audio(siSound);
+  ).length; // Tracks the number of correct answers
+  const incorrectlyAnswered = answers.length - correctlyAnswered; // Tracks the number of incorrect answers
+  const [currentSelected, setCurrentSelected] = useState<number | null>(null); // The currently selected answer to a question
+  const isLastQuestion = questionIndex >= questions.length - 1; // Indicates if we are on the last question
+  const sound = new Audio(siSound); // A sound effect
 
   // Changes between states in the quiz
   function handleScreenChange() {
@@ -47,7 +47,11 @@ function App() {
     }
 
     if (questionIndex === 4) {
-      sound.play().catch(console.error);
+      try {
+        sound.play();
+      } catch (error) {
+        console.log("Could not play sound effect!");
+      }
     }
 
     setCurrentSelected(null);
@@ -113,7 +117,6 @@ function App() {
           </>
         )}
       </main>
-      <footer></footer>
     </>
   );
 }

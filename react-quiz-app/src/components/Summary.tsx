@@ -16,6 +16,7 @@ export function Summary({
   return (
     <>
       {correctlyAnswered < 3 ? (
+        // Not enough questions answered correctly
         <>
           <img
             src={failure}
@@ -26,13 +27,16 @@ export function Summary({
           <h2>You have failed!</h2>
           <p>
             You answered{" "}
-            {correctlyAnswered <= 0 ? "none" : `only ${correctlyAnswered}`} out
-            of {questions.length} questions correctly, with{" "}
-            {incorrectlyAnswered} answered incorrectly, and you are cast into
-            the Gorge of Eternal Peril!
+            {correctlyAnswered <= 0
+              ? "none of"
+              : `only ${correctlyAnswered} out of`}{" "}
+            {questions.length} questions correctly, with {incorrectlyAnswered}{" "}
+            answered incorrectly, and you are cast into the Gorge of Eternal
+            Peril!
           </p>
         </>
       ) : (
+        // Enough questions have been answered correctly
         <>
           <img
             src={grail}
