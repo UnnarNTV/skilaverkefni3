@@ -59,12 +59,12 @@ export const questions = [
   {
     id: 6,
     question:
-      "NOBODY EXPECTS THE SPANISH INQUISITION!!!\nOur chief weapons are?",
+      "NOBODY EXPECTS THE SPANISH INQUISITION!!!\nNow, how do you plead?",
     options: [
-      "The Holy Hand Grenade, a herring, and a very angry rabbit.",
-      "THE SOFT CUSHIONS!",
-      "Surprise! Fear! Ruthless efficiency! And an almost fanatical devotion to the Pope!",
-      "This is a lingerie shop, sir.",
+      "We're innocent!",
+      "I didn't expect a kind of Spanish Inquisition",
+      "I CONFESS! I CONFESS!",
+      "This is a lingerie shop, sir",
     ],
     correctIndex: 2,
   },
